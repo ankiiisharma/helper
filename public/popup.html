@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helper - Job Application Autofill</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <h1>Helper</h1>
+        <p class="subtitle">Your Job Application Assistant</p>
+      </div>
+    </header>
+
+    <div class="content">
+      <form id="autofillForm">
+        <!-- Personal Information -->
+        <section class="form-section">
+          <h2>Personal Information</h2>
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="location">Current Location</label>
+            <input type="text" id="location" name="location">
+          </div>
+        </section>
+
+        <!-- Professional Information -->
+        <section class="form-section">
+          <h2>Professional Information</h2>
+          <div class="form-group">
+            <label for="currentTitle">Current Job Title</label>
+            <input type="text" id="currentTitle" name="currentTitle">
+          </div>
+          <div class="form-group">
+            <label for="company">Current Company</label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="form-group">
+            <label for="experience">Years of Experience</label>
+            <input type="number" id="experience" name="experience" min="0" step="0.5">
+          </div>
+          <div class="form-group">
+            <label for="skills">Key Skills (comma separated)</label>
+            <textarea id="skills" name="skills" rows="3"></textarea>
+          </div>
+        </section>
+
+        <!-- Links -->
+        <section class="form-section">
+          <h2>Professional Links</h2>
+          <div class="form-group">
+            <label for="linkedin">LinkedIn Profile</label>
+            <input type="url" id="linkedin" name="linkedin">
+          </div>
+          <div class="form-group">
+            <label for="github">GitHub Profile</label>
+            <input type="url" id="github" name="github">
+          </div>
+          <div class="form-group">
+            <label for="portfolio">Portfolio Website</label>
+            <input type="url" id="portfolio" name="portfolio">
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="form-section">
+          <h2>Education</h2>
+          <div class="form-group">
+            <label for="degree">Highest Degree</label>
+            <input type="text" id="degree" name="degree">
+          </div>
+          <div class="form-group">
+            <label for="university">University/Institution</label>
+            <input type="text" id="university" name="university">
+          </div>
+          <div class="form-group">
+            <label for="gradYear">Graduation Year</label>
+            <input type="number" id="gradYear" name="gradYear" min="1950" max="2030">
+          </div>
+        </section>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary">Save Information</button>
+          <button type="button" id="autofillButton" class="btn-secondary">Autofill Active Page</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
